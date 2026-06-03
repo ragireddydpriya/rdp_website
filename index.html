@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio and professional profile for Devi Priya Ragireddy, Senior Python Backend and Data Engineer."
+    />
+    <title>Devi Priya Ragireddy | Backend & Data Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Devi Priya Ragireddy home">
+        <img class="brand-mark" src="assets/devi-priya-ragireddy.png" alt="Devi Priya Ragireddy" />
+        <span>Devi Priya Ragireddy</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#story">Story</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Senior Python Backend & Data Engineer</p>
+          <h1 id="hero-title">
+            Backend engineer building data platforms that scale.
+          </h1>
+          <p class="hero-intro">
+            With 6+ years across enterprise data, analytics, and automotive
+            software delivery, I bring together Python engineering, distributed
+            data processing, APIs, CI/CD, and production ownership.
+          </p>
+          <div class="hero-actions" aria-label="Key actions">
+            <a class="button primary" href="#projects">Explore Projects</a>
+            <a class="button secondary" href="assets/DeviPriyaRagireddy.docx" download>
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile-panel" aria-label="Profile summary">
+          <img
+            class="profile-photo"
+            src="assets/devi-priya-ragireddy.png"
+            alt="Portrait of Devi Priya Ragireddy"
+          />
+          <div class="profile-card">
+            <span class="availability">Open to meaningful backend and data roles</span>
+            <h2>Python, data engineering, cloud platforms, and reliable delivery.</h2>
+            <p>
+              I enjoy turning complex business workflows into clear services,
+              pipelines, and systems that can be trusted in production.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section-shell story-grid" id="story" aria-labelledby="story-title">
+        <div>
+          <p class="eyebrow">Professional Summary</p>
+          <h2 id="story-title">A backend engineer with a data-platform mindset.</h2>
+        </div>
+        <article class="story-body">
+          <p>
+            My work sits at the intersection of backend services, distributed
+            data processing, and cloud-native enterprise platforms. I have built
+            REST APIs, microservices, ETL and ELT pipelines, metadata systems,
+            and reporting workflows using Python, SQL, PySpark, Databricks,
+            AWS, and Azure.
+          </p>
+          <p>
+            Across Agile teams, I have owned systems from architecture through
+            production deployment and support. That means designing for scale,
+            debugging under pressure, automating delivery, improving stability,
+            and making sure business-critical platforms keep moving.
+          </p>
+        </article>
+      </section>
+
+      <section class="section-shell metrics" aria-label="Career highlights">
+        <div>
+          <strong>6+</strong>
+          <span>Years of experience</span>
+        </div>
+        <div>
+          <strong>2</strong>
+          <span>Companies</span>
+        </div>
+        <div>
+          <strong>Cloud</strong>
+          <span>AWS and Azure delivery experience</span>
+        </div>
+        <div>
+          <strong>Data</strong>
+          <span>ETL, ELT, metadata, and analytics platforms</span>
+        </div>
+      </section>
+
+      <section class="section-shell" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="projects-title">Projects that show how I think and build.</h2>
+          <p>
+            These are the professional projects from my resume, rewritten as a
+            portfolio story so recruiters can quickly understand the problem,
+            platform, and impact.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card feature">
+            <div class="project-meta">
+              <span>FactSet Systems India</span>
+              <span>Jun 2022 - Present</span>
+            </div>
+            <h3>Enterprise Data Catalog</h3>
+            <p>
+              Developed backend services and metadata management solutions for
+              enterprise-wide data discovery and governance. The platform helps
+              teams access business and technical metadata consistently across
+              the organization.
+            </p>
+            <ul>
+              <li>Built cloud-native backend services for metadata discovery.</li>
+              <li>Enabled unified access to business and technical metadata.</li>
+              <li>Collaborated across product, engineering, and analytics teams.</li>
+            </ul>
+          </article>
+
+          <article class="project-card feature">
+            <div class="project-meta">
+              <span>Data Engineering</span>
+              <span>Python, SQL, PySpark, Databricks</span>
+            </div>
+            <h3>COMMS Data Pipeline</h3>
+            <p>
+              Designed and developed a scalable ETL pipeline using Databricks with medallion architecture (Bronze, Silver, Gold layers), dynamic schema handling, CDC-based incremental processing, and SCD2 tracking. The pipeline processes diverse data types with full automation, error resilience via email alerting, and human-readable analytics-ready output.
+            </p>
+            <ul>
+              <li><strong>Architecture:</strong> Medallion pattern with Bronze (raw), Silver (processed), Gold (analytics) layers.</li>
+              <li><strong>CDC Integration:</strong> Unified change data capture tracking across all layers for optimal incremental processing.</li>
+              <li><strong>Schema Evolution:</strong> Dynamic column handling without pipeline interruption using YAML configuration.</li>
+              <li><strong>Data Quality:</strong> Multi-stage deduplication, type safety, and row count validation.</li>
+              <li><strong>Performance:</strong> Adaptive Query Execution (AQE), partition-based processing, and smart S3 file management.</li>
+              <li><strong>Resilience:</strong> Full-stack error handling with root cause display and email-based alerting.</li>
+              <li><strong>Audit &amp; Compliance:</strong> SCD2 tables capture all metadata changes; all steps logged for troubleshooting.</li>
+            </ul>
+            <details style="margin-top: 20px; padding: 0; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+              <summary style="cursor: pointer; font-weight: 600; color: #000000; padding: 15px; background: #f5f5f5; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                <span>View detailed architecture &amp; orchestration</span>
+                <span style="font-size: 0.9rem;">▼</span>
+              </summary>
+              <div style="padding: 20px 15px; background: #ffffff; font-size: 0.95rem; line-height: 1.7; color: #000000;">
+                <h4 style="margin: 0 0 10px 0; color: #000000; font-size: 1rem;">CDC (Change Data Capture) Architecture</h4>
+                <p style="margin: 0 0 15px 0; color: #000000;"><strong>Key Innovation:</strong> Unified CDC tracking across all layers for optimal performance and context awareness.</p>
+                <ul style="margin: 0 0 20px 0; padding-left: 20px;">
+                  <li style="margin-bottom: 8px; color: #000000;"><strong>CDC Control Table:</strong> Centralized version tracking for Bronze → Silver → Gold transitions.</li>
+                  <li style="margin-bottom: 8px; color: #000000;"><strong>Incremental Processing:</strong> Only changed data processed after initial full load, maintaining context for calculations.</li>
+                  <li style="margin-bottom: 8px; color: #000000;"><strong>Version Tracking:</strong> Each layer tracks last processed version from upstream tables.</li>
+                  <li style="color: #000000;"><strong>First-Run Detection:</strong> Automatically handles initial full load vs. incremental updates.</li>
+                </ul>
+                <h4 style="margin: 20px 0 10px 0; color: #000000; font-size: 1rem;">Job Orchestration Flow</h4>
+                <ol style="margin: 0 0 20px 0; padding-left: 20px;">
+                  <li style="margin-bottom: 10px; color: #000000;"><strong>Bronze Layer:</strong> Ingests S3 Parquet files (incremental &amp; one-time loads), normalizes schema, performs basic cleaning, applies dynamic type conversions per workflow config, outputs unique workflow IDs, and moves processed files for audit.</li>
+                  <li style="margin-bottom: 10px; color: #000000;"><strong>Silver Layer:</strong> Processes CDC changes from Bronze, maintains context for window functions, applies SCD2 logic, calculates business metrics, and merges into Silver Delta table with version tracking.</li>
+                  <li style="color: #000000;"><strong>Gold Layer:</strong> Consumes CDC changes from Silver, evolves schema per requirements, flattens queryable JSON output, and produces analytics-ready tables for BI/reporting.</li>
+                </ol>
+                <h4 style="margin: 20px 0 10px 0; color: #000000; font-size: 1rem;">Performance &amp; Reliability</h4>
+                <ul style="margin: 0 0 20px 0; padding-left: 20px;">
+                  <li style="margin-bottom: 8px; color: #000000;"><strong>AQE Tuning:</strong> Adaptive Query Execution configured per layer based on data volume.</li>
+                  <li style="margin-bottom: 8px; color: #000000;"><strong>Batch Operations:</strong> Bulk file operations with fallback strategies to avoid lock contention.</li>
+                  <li style="margin-bottom: 8px; color: #000000;"><strong>Error Resilience:</strong> Comprehensive error handling with detailed logging and email notifications for failures.</li>
+                  <li style="color: #000000;"><strong>Storage Management:</strong> Automated cleanup of processed files with configurable retention (7 days PROD, 3 days otherwise).</li>
+                </ul>
+                <h4 style="margin: 20px 0 10px 0; color: #000000; font-size: 1rem;">Configuration &amp; Extensibility</h4>
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li style="margin-bottom: 8px; color: #000000;">All parameters configurable via YAML files (no code changes needed).</li>
+                  <li style="margin-bottom: 8px; color: #000000;">Schema evolution support — adding new fields and workflows requires no code rewrite.</li>
+                  <li style="color: #000000;">Full audit trail via SCD2 tables and centralized logging for compliance and troubleshooting.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Backend Engineering</span>
+              <span>REST APIs, Python, SQL</span>
+            </div>
+            <h3>COMMS Admin</h3>
+            <p>
+              Developed RESTful APIs and backend services for workflow
+              configuration and reporting, while contributing to deployments,
+              troubleshooting, debugging, and KTLO production support.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Workflow Automation</span>
+              <span>Metadata-driven processing</span>
+            </div>
+            <h3>Nirnay</h3>
+            <p>
+              Engineered a metadata-driven document evaluation platform with
+              six processing engines for research analysts, improving structured
+              evaluation workflows and backend processing reliability.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Bosch Global Software Technologies</span>
+              <span>Sep 2019 - Jun 2022</span>
+            </div>
+            <h3>OTAS Project</h3>
+            <p>
+              Worked on automotive Over-the-Air software update platforms for
+              connected vehicle ecosystems, contributing to backend workflows
+              for deployment management, testing, debugging, and production
+              support.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Technical Toolkit</p>
+          <h2 id="skills-title">The technologies I use to deliver production systems.</h2>
+        </div>
+
+        <div class="skill-groups">
+          <article>
+            <h3>Backend Engineering</h3>
+            <p>Python, FastAPI, Flask, REST APIs, Microservices, OOP, System Design, Backend Architecture</p>
+          </article>
+          <article>
+            <h3>Data Engineering</h3>
+            <p>PySpark, Databricks, Dremio, SQL, ETL/ELT Pipelines, Distributed Processing, Data Warehousing</p>
+          </article>
+          <article>
+            <h3>Cloud & DevOps</h3>
+            <p>AWS Lambda, ECS, API Gateway, RDS, ECR, S3, Athena, CloudWatch, Azure ADF, Synapse, SQL Server, Key Vault</p>
+          </article>
+          <article>
+            <h3>Engineering Practices</h3>
+            <p>Git, GitHub Actions, Jenkins, CI/CD, Agile/Scrum, Workflow Automation, KTLO, Debugging, Troubleshooting</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell timeline-section" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="eyebrow">Career Notes</p>
+          <h2 id="timeline-title">Recognition, stability, and steady ownership.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Recognition</span>
+            <p>
+              Received STAR, Blue Ribbon, Applause, and Agile Awards for
+              technical contributions, operational improvements, and business
+              impact.
+            </p>
+          </article>
+          <article>
+            <span>Stability</span>
+            <p>
+              Improved engineering stability and observability practices by
+              promoting tools such as Lightstep and SonarQube across teams.
+            </p>
+          </article>
+          <article>
+            <span>Education</span>
+            <p>
+              B.Tech in Electronics & Communication Engineering from SRKR
+              Engineering College, Bhimavaram, with a CGPA of 9.08.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-shell contact-inner">
+          <div>
+            <p class="eyebrow">Connect</p>
+            <h2 id="contact-title">For backend, data engineering, and cloud platform roles.</h2>
+            <p>
+              I am ready to share more context on my project ownership,
+              architecture decisions, production support experience, and the
+              kind of engineering teams where I do my best work.
+            </p>
+          </div>
+          <div class="contact-links" aria-label="Contact links">
+            <a href="mailto:devipriyaragireddy@gmail.com">Email: devipriyaragireddy@gmail.com</a>
+            <a href="https://www.linkedin.com/in/devi-priya-ragireddy-1b617220b/" target="_blank" rel="noreferrer">
+              LinkedIn: linkedin.com/in/devi-priya-ragireddy-1b617220b/
+            </a>
+            <a href="https://github.com/ragireddydpriya" target="_blank" rel="noreferrer">
+              GitHub: github.com/ragireddydpriya
+            </a>
+            <a href="tel:+919010894556">Phone: +91 9010894556</a>
+            <a href="https://wa.me/9010894556" target="_blank" rel="noreferrer">
+              WhatsApp: +91 9010894556
+            </a>
+            <span>Location: Hyderabad</span>
+            <a href="assets/DeviPriyaRagireddy.docx" download>Download Resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Devi Priya Ragireddy</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
