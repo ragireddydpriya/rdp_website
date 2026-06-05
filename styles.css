@@ -101,8 +101,16 @@ a {
 #projects {
   background: var(--ink);
   color: white;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+#projects .section-heading {
+  width: 100%;
+  max-width: none;
+  padding: 0 20px;
 }
 
 #projects .section-heading h2,
@@ -112,10 +120,17 @@ a {
 }
 
 #projects .project-list {
-  padding: 24px 0 0;
+  padding: 24px 20px 0;
+  display: grid;
+  grid-template-columns: 1fr !important;
+  grid-auto-columns: 1fr !important;
+  grid-auto-flow: row !important;
+  gap: 18px;
 }
 
 #projects .project-card {
+  width: 100%;
+  min-width: 0;
   background: var(--ink);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -323,7 +338,7 @@ h3 {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 18px;
   padding-bottom: 30px;
 }

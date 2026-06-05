@@ -8,7 +8,7 @@ Static portfolio website for GitHub Pages.
 - `styles.css` - responsive visual design
 - `script.js` - small footer year script
 - `assets/devi-priya-ragireddy.png` - profile photo
-- `assets/DeviPriyaRagireddy.docx` - downloadable resume
+- `assets/DeviPriyaRagireddy.pdf` - downloadable resume
 
 ## How to Run Locally
 
