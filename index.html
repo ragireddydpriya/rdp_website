@@ -138,6 +138,38 @@
           <article class="project-card">
             <div class="project-meta">
               <span>Data Engineering</span>
+              <span>AWS Lambda, RDS, SQS</span>
+            </div>
+            <h3>NRT — Near Real-Time Data Ingestion Pipeline</h3>
+            <p>
+              Developed a config-driven ingestion platform that audits source
+              changes and streams ordered updates into RDS with AWS
+              automation.
+            </p>
+            <ul>
+              <li>Built UI/API-driven source configuration with RDS audit
+                tracking and sync state management.</li>
+              <li>Scheduled a parent Lambda every 5 minutes via EventBridge and
+                used SQS FIFO for reliable message ordering.</li>
+              <li>Implemented autoscaling child Lambda workers, failure handling,
+                and dashboard-ready destination data.</li>
+            </ul>
+            <details style="margin-top: 20px; padding: 0; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; overflow: hidden;">
+              <summary style="cursor: pointer; font-weight: 600; color: rgba(255, 255, 255, 0.92); padding: 15px; background: rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                <span>View architecture overview</span>
+                <span style="font-size: 0.9rem;">▼</span>
+              </summary>
+              <div style="padding: 20px 15px; background: rgba(255, 255, 255, 0.04); font-size: 0.95rem; line-height: 1.7; color: rgba(255, 255, 255, 0.92);">
+                <p style="margin: 0 0 10px 0;"><strong>Core components:</strong> UI, Backend API, config Postgres DB, EventBridge parent Lambda, SQS FIFO, child Lambda workers, and destination Postgres.</p>
+                <p style="margin: 0 0 10px 0;">Supports one-time full loads for new sources, incremental work messaging for existing sources, and automated alerting for stuck or failed jobs.</p>
+                <p style="margin: 0;">Destination Postgres tables are exposed via RDS for dashboard and reporting consumption.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Data Engineering</span>
               <span>Python, SQL, PySpark, Databricks</span>
             </div>
             <h3>COMMS Data Pipeline</h3>
@@ -153,42 +185,42 @@
               <li>Optimized pipeline performance and reliability for enterprise BI
                 and analytics operations.</li>
             </ul>
-            <details style="margin-top: 20px; padding: 0; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-              <summary style="cursor: pointer; font-weight: 600; color: #000000; padding: 15px; background: #f5f5f5; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+            <details style="margin-top: 20px; padding: 0; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; overflow: hidden;">
+              <summary style="cursor: pointer; font-weight: 600; color: rgba(255, 255, 255, 0.92); padding: 15px; background: rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; user-select: none;">
                 <span>View detailed architecture &amp; orchestration</span>
                 <span style="font-size: 0.9rem;">▼</span>
               </summary>
-              <div style="padding: 20px 15px; background: #ffffff; font-size: 0.95rem; line-height: 1.7; color: #000000;">
-                <h4 style="margin: 0 0 10px 0; color: #000000; font-size: 1rem;">CDC (Change Data Capture) Architecture</h4>
-                <p style="margin: 0 0 15px 0; color: #000000;"><strong>Key Innovation:</strong> Unified CDC tracking across all layers for optimal performance and context awareness.</p>
+              <div style="padding: 20px 15px; background: rgba(255, 255, 255, 0.04); font-size: 0.95rem; line-height: 1.7; color: rgba(255, 255, 255, 0.92);">
+                <h4 style="margin: 0 0 10px 0; color: rgba(255, 255, 255, 0.92); font-size: 1rem;">CDC (Change Data Capture) Architecture</h4>
+                <p style="margin: 0 0 15px 0; color: rgba(255, 255, 255, 0.92);"><strong>Key Innovation:</strong> Unified CDC tracking across all layers for optimal performance and context awareness.</p>
                 <figure style="margin: 0 0 20px 0; text-align: center;">
-                  <img src="assets/flowchart.png" alt="COMMS Data Pipeline flowchart" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05);" />
-                  <figcaption style="margin-top: 10px; color: #555555; font-size: 0.9rem;">COMMS Data Pipeline architecture and orchestration flow.</figcaption>
+                  <img src="assets/flowchart.png" alt="COMMS Data Pipeline flowchart" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 0 1px rgba(255,255,255,0.08);" />
+                  <figcaption style="margin-top: 10px; color: rgba(255, 255, 255, 0.72); font-size: 0.9rem;">COMMS Data Pipeline architecture and orchestration flow.</figcaption>
                 </figure>
                 <ul style="margin: 0 0 20px 0; padding-left: 20px;">
-                  <li style="margin-bottom: 8px; color: #000000;"><strong>CDC Control Table:</strong> Centralized version tracking for Bronze → Silver → Gold transitions.</li>
-                  <li style="margin-bottom: 8px; color: #000000;"><strong>Incremental Processing:</strong> Only changed data processed after initial full load, maintaining context for calculations.</li>
-                  <li style="margin-bottom: 8px; color: #000000;"><strong>Version Tracking:</strong> Each layer tracks last processed version from upstream tables.</li>
-                  <li style="color: #000000;"><strong>First-Run Detection:</strong> Automatically handles initial full load vs. incremental updates.</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);"><strong>CDC Control Table:</strong> Centralized version tracking for Bronze → Silver → Gold transitions.</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);"><strong>Incremental Processing:</strong> Only changed data processed after initial full load, maintaining context for calculations.</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);"><strong>Version Tracking:</strong> Each layer tracks last processed version from upstream tables.</li>
+                  <li style="color: rgba(255, 255, 255, 0.92);"><strong>First-Run Detection:</strong> Automatically handles initial full load vs. incremental updates.</li>
                 </ul>
-                <h4 style="margin: 20px 0 10px 0; color: #000000; font-size: 1rem;">Job Orchestration Flow</h4>
+                <h4 style="margin: 20px 0 10px 0; color: rgba(255, 255, 255, 0.92); font-size: 1rem;">Job Orchestration Flow</h4>
                 <ol style="margin: 0 0 20px 0; padding-left: 20px;">
-                  <li style="margin-bottom: 10px; color: #000000;"><strong>Bronze Layer:</strong> Ingests S3 Parquet files (incremental &amp; one-time loads), normalizes schema, performs basic cleaning, applies dynamic type conversions per workflow config, outputs unique workflow IDs, and moves processed files for audit.</li>
-                  <li style="margin-bottom: 10px; color: #000000;"><strong>Silver Layer:</strong> Processes CDC changes from Bronze, maintains context for window functions, applies SCD2 logic, calculates business metrics, and merges into Silver Delta table with version tracking.</li>
-                  <li style="color: #000000;"><strong>Gold Layer:</strong> Consumes CDC changes from Silver, evolves schema per requirements, flattens queryable JSON output, and produces analytics-ready tables for BI/reporting.</li>
+                  <li style="margin-bottom: 10px; color: rgba(255, 255, 255, 0.92);"><strong>Bronze Layer:</strong> Ingests S3 Parquet files (incremental &amp; one-time loads), normalizes schema, performs basic cleaning, applies dynamic type conversions per workflow config, outputs unique workflow IDs, and moves processed files for audit.</li>
+                  <li style="margin-bottom: 10px; color: rgba(255, 255, 255, 0.92);"><strong>Silver Layer:</strong> Processes CDC changes from Bronze, maintains context for window functions, applies SCD2 logic, calculates business metrics, and merges into Silver Delta table with version tracking.</li>
+                  <li style="color: rgba(255, 255, 255, 0.92);"><strong>Gold Layer:</strong> Consumes CDC changes from Silver, evolves schema per requirements, flattens queryable JSON output, and produces analytics-ready tables for BI/reporting.</li>
                 </ol>
-                <h4 style="margin: 20px 0 10px 0; color: #000000; font-size: 1rem;">Performance &amp; Reliability</h4>
+                <h4 style="margin: 20px 0 10px 0; color: rgba(255, 255, 255, 0.92); font-size: 1rem;">Performance &amp; Reliability</h4>
                 <ul style="margin: 0 0 20px 0; padding-left: 20px;">
-                  <li style="margin-bottom: 8px; color: #000000;"><strong>AQE Tuning:</strong> Adaptive Query Execution configured per layer based on data volume.</li>
-                  <li style="margin-bottom: 8px; color: #000000;"><strong>Batch Operations:</strong> Bulk file operations with fallback strategies to avoid lock contention.</li>
-                  <li style="margin-bottom: 8px; color: #000000;"><strong>Error Resilience:</strong> Comprehensive error handling with detailed logging and email notifications for failures.</li>
-                  <li style="color: #000000;"><strong>Storage Management:</strong> Automated cleanup of processed files with configurable retention (7 days PROD, 3 days otherwise).</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);"><strong>AQE Tuning:</strong> Adaptive Query Execution configured per layer based on data volume.</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);"><strong>Batch Operations:</strong> Bulk file operations with fallback strategies to avoid lock contention.</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);"><strong>Error Resilience:</strong> Comprehensive error handling with detailed logging and email notifications for failures.</li>
+                  <li style="color: rgba(255, 255, 255, 0.92);"><strong>Storage Management:</strong> Automated cleanup of processed files with configurable retention (7 days PROD, 3 days otherwise).</li>
                 </ul>
-                <h4 style="margin: 20px 0 10px 0; color: #000000; font-size: 1rem;">Configuration &amp; Extensibility</h4>
+                <h4 style="margin: 20px 0 10px 0; color: rgba(255, 255, 255, 0.92); font-size: 1rem;">Configuration &amp; Extensibility</h4>
                 <ul style="margin: 0; padding-left: 20px;">
-                  <li style="margin-bottom: 8px; color: #000000;">All parameters configurable via YAML files (no code changes needed).</li>
-                  <li style="margin-bottom: 8px; color: #000000;">Schema evolution support — adding new fields and workflows requires no code rewrite.</li>
-                  <li style="color: #000000;">Full audit trail via SCD2 tables and centralized logging for compliance and troubleshooting.</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);">All parameters configurable via YAML files (no code changes needed).</li>
+                  <li style="margin-bottom: 8px; color: rgba(255, 255, 255, 0.92);">Schema evolution support — adding new fields and workflows requires no code rewrite.</li>
+                  <li style="color: rgba(255, 255, 255, 0.92);">Full audit trail via SCD2 tables and centralized logging for compliance and troubleshooting.</li>
                 </ul>
               </div>
             </details>
